@@ -69,6 +69,8 @@
                     
                     myAnnotation.title = title;
                     myAnnotation.subtitle = subTitle;
+                    _labelAddress.text = [NSString stringWithFormat:@"%@",myPlacemark.locality];
+
                     [self.myMapView addAnnotation:myAnnotation];
                     
                 }
@@ -108,6 +110,15 @@
 
     CLLocation *currentLocation = [locations lastObject];
     
+    _labelLatitude.text = [NSString stringWithFormat:@"%f",currentLocation.coordinate.latitude];
+    
+    _labelLongitude.text = [NSString stringWithFormat:@"%f",currentLocation.coordinate.longitude];
+    
+    _labelAltitude.text = [NSString stringWithFormat:@"%f",currentLocation.altitude];
+    
+    _labelSpeed.text = [NSString stringWithFormat:@"%f",currentLocation.speed];
+    
+
     NSLog(@"Latitude :%f",currentLocation.coordinate.latitude);
     
     NSLog(@"Longitude :%f",currentLocation.coordinate.longitude);

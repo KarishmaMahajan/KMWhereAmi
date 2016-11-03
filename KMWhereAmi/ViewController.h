@@ -22,6 +22,17 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *labelLongitude;
 
+@property (strong, nonatomic) IBOutlet UILabel *labelAltitude;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *labelSpeed;
+
+
+@property (strong, nonatomic) IBOutlet UILabel *labelDirection;
+
+@property (strong, nonatomic) IBOutlet UILabel *labelAddress;
+
+
 
 - (IBAction)actionStartDetectingLocation:(id)sender;
 
